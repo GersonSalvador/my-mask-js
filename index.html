@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>My Mask JS</title>
+</head>
+<body>
+  <header>
+    <h1>My Mask JS</h1>
+  </header>
+  <form action="#">
+    <div>
+      <label for="cpf-cnpj">CPF/CNPJ</label>
+      <input type="text" id="cpf-cnpj" class="cpf-cnpj-mask" placeholder="cpf-cnpj">
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" class="phone-mask" placeholder="phone">
+    </div>
+    <div>
+      <label for="cep">CEP</label>
+      <input type="text" id="cep" class="cep-mask" placeholder="cep">
+    </div>
+    <div>
+      <label for="date">Date</label>
+      <input type="text" id="date" class="date-mask" placeholder="date">
+    </div>
+    <div>
+      <label for="corrency">Currency</label>
+      <input type="text" id="currency" class="currency-mask" placeholder="R$ 0,00">
+    </div>
+  </form>
+  <script src="my-mask-js.js"></script>
+  <script>
+    myMaskJS('.cpf-cnpj-mask', '999.999.999-99', '99.999.999/9999-99')
+    myMaskJS('.phone-mask', '(99) 99999-9999', '(99) 9999-9999')
+    myMaskJS('.cep-mask', '99.999-999')
+    myMaskJS('.date-mask', '99/99/9999')
+    myMaskJS('.currency-mask', 'R$ 0,00')
+  </script>
+</body>
+</html>
